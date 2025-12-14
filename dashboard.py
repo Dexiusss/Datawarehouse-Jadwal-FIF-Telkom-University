@@ -192,7 +192,6 @@ if is_connected and engine:
                 int id_dosen PK
                 string kode_dosen
                 string nama_dosen
-                string jfa
             }
             DIM_MATAKULIAH {
                 int id_mk PK
@@ -242,9 +241,13 @@ if is_connected and engine:
             * `dim_matakuliah`: Menyimpan detail mata kuliah (termasuk pemisahan jenis Reguler/Responsi).
             * `dim_ruangan`: Menyimpan lokasi fisik (Gedung, Lantai).
             * `dim_waktu`: Menyimpan atribut waktu (Tahun Ajaran, Semester, Hari, Jam).
+
+        Filenya di github btw: https://github.com/Dexiusss/Datawarehouse-Jadwal-FIF-Telkom-University
+        Database akses bisa request aja
         """)
 
 else:
     st.info("Silakan hubungkan database di sidebar sebelah kiri.")
+
 
 
