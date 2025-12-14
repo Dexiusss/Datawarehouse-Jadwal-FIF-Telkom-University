@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  db_jadwal:
+    image: postgres:15
+    container_name: postgres_jadwal_container
+    # Setting username dan password untuk database
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: warehouse_jadwal
+    # Membuka port agar bisa diakses dari luar docker 
+    ports:
+      - "5432:5432"
+    # Volume agar data TIDAK HILANG saat docker dimatikan
+    volumes:
+      - pgdata_jadwal:/var/lib/postgresql/data
+
+# Mendaftarkan volume yang dipakai diatas
+volumes:
+  pgdata_jadwal:
