@@ -91,7 +91,7 @@ if is_connected and engine:
     # --- CHART 1: Beban SKS Dosen ---
             with col1:
                 st.subheader("Top 10 Dosen (Total SKS)")
-                st.caption("Total SKS dari mata kuliah unik (TETAP) yang diajar.")
+                st.caption("Total SKS dari mata kuliah unik yang diajar.")
                 query_dosen = text("""
                 SELECT 
                     d.nama_dosen, 
@@ -262,6 +262,7 @@ if is_connected and engine:
 
 else:
     st.info("Silakan hubungkan database di sidebar sebelah kiri.")
+
 
 
 
