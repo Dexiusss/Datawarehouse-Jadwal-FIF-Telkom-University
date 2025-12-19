@@ -103,7 +103,7 @@ if is_connected and engine:
                 JOIN dim_matakuliah mk ON f.id_mk = mk.id_mk
                 WHERE w.tahun_ajaran = :ta 
                   AND w.semester = :sem
-                  AND mk.jenis_matakuliah != 'RESPONSI' -- Filter hanya matkul Tetap/Reguler
+                  AND mk.jenis_matakuliah = 'TETAP'
                 GROUP BY d.nama_dosen
                 ORDER BY total_sks DESC
                 LIMIT 10;
@@ -254,6 +254,7 @@ if is_connected and engine:
 
 else:
     st.info("Silakan hubungkan database di sidebar sebelah kiri.")
+
 
 
 
